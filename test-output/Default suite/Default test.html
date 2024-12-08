@@ -1,0 +1,2173 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/12</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Dec 05 19:26:16 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>44 seconds (44361 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Regression.beforeClass()'><b>beforeClass</b><br>Test class: Regression</td>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace37981645", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace37981645'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div></td>
+<td>44</td>
+<td>Regression@1972e513</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Regression.afterMethod()'><b>afterMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.beforeMethod()'><b>beforeMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.beforeMethod()'><b>beforeMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.afterMethod()'><b>afterMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.beforeMethod()'><b>beforeMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.afterMethod()'><b>afterMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.beforeMethod()'><b>beforeMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.beforeMethod()'><b>beforeMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.afterMethod()'><b>afterMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.beforeMethod()'><b>beforeMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.beforeMethod()'><b>beforeMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.beforeMethod()'><b>beforeMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.beforeMethod()'><b>beforeMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.beforeMethod()'><b>beforeMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.afterMethod()'><b>afterMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.afterClass()'><b>afterClass</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.beforeMethod()'><b>beforeMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.beforeMethod()'><b>beforeMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.afterMethod()'><b>afterMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.afterMethod()'><b>afterMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.afterMethod()'><b>afterMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.afterMethod()'><b>afterMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.afterMethod()'><b>afterMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.afterMethod()'><b>afterMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.afterMethod()'><b>afterMethod</b><br>Test class: Regression</td>
+<td></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Regression.regression()'><b>regression</b><br>Test class: Regression<br>Parameters: https://www.casgevy.ca/stay-informed?condition=scd, StayInformed</td>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace353023213", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace353023213'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.regression()'><b>regression</b><br>Test class: Regression<br>Parameters: https://www.casgevy.ca/scd/mechanism-of-action, MOA</td>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1661777060", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1661777060'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.regression()'><b>regression</b><br>Test class: Regression<br>Parameters: https://www.casgevy.ca/scd/safety-and-tolerability-profile, SafetyProfile</td>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace105966264", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace105966264'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.regression()'><b>regression</b><br>Test class: Regression<br>Parameters: https://www.casgevy.ca/scd/engraftment, Engraftment</td>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1328323494", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1328323494'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.regression()'><b>regression</b><br>Test class: Regression<br>Parameters: https://www.casgevy.ca/scd/role-of-fetal-hemoglobin, RoleofFetal</td>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1478995734", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1478995734'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.regression()'><b>regression</b><br>Test class: Regression<br>Parameters: https://www.casgevy.ca/scd/efficacy-data, Efficacy</td>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1637613097", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1637613097'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.regression()'><b>regression</b><br>Test class: Regression<br>Parameters: https://www.casgevy.ca/welcome, Welcome</td>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1193398802", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1193398802'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.regression()'><b>regression</b><br>Test class: Regression<br>Parameters: https://www.casgevy.ca/patient-support-program?condition=scd, PatientSupport</td>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1943750504", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1943750504'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.regression()'><b>regression</b><br>Test class: Regression<br>Parameters: https://www.casgevy.ca/scd/home, ScdHome</td>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace34073107", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace34073107'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.regression()'><b>regression</b><br>Test class: Regression<br>Parameters: https://www.casgevy.ca/scd/trial-design, TrialDesign</td>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace351656492", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace351656492'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.regression()'><b>regression</b><br>Test class: Regression<br>Parameters: https://www.casgevy.ca/scd/pharmacodynamics, PharmacoDynamics</td>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1697281847", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1697281847'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+<tr>
+<td title='Regression.regression()'><b>regression</b><br>Test class: Regression<br>Parameters: https://www.casgevy.ca/scd/treatment-journey, TreatmentJourney</td>
+<td><div><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace617928649", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace617928649'><pre>com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:111)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:119)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:102)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:87)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:123)
+	at com.microsoft.playwright.Locator.click(Locator.java:2183)
+	at Regression.beforeClass(Regression.java:46)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for locator(&quot;#onetrust-accept-btn-handler&quot;)
+============================================================
+    at ProgressController.run (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\progress.js:88:26)
+    at Frame.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\frames.js:1011:23)
+    at FrameDispatcher.click (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\frameDispatcher.js:149:30)
+    at DispatcherConnection.dispatch (C:\Users\ishiv\AppData\Local\Temp\playwright-java-4881592601537366497\package\lib\server\dispatchers\dispatcher.js:319:46)
+}
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:199)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:181)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:109)
+	... 36 more
+</pre></div></td>
+<td>0</td>
+<td>Regression@1972e513</td></tr>
+</table><p>
+</body>
+</html>
